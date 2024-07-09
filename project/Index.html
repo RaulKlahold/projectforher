@@ -34,7 +34,7 @@
 
 
         function moverBotao() {
-            var botao = sim;
+            var botao = nao;
             var novoX = Math.random() * window.innerWidth;
             var novoY = Math.random() * window.innerHeight;
 
@@ -50,29 +50,29 @@
         function entrar() {
             estado++;
             if (estado === 0) {
-                nao.style.transform = "translate(50%)";
-                sim.style.transform = "translate(90px, -80px)";
+                sim.style.transform = "translate(50%)";
+                nao.style.transform = "translate(90px, -80px)";
             }
             if (estado == 1) {
-                sim.style.transform = "translate(70px, 90px)"; 
+                nao.style.transform = "translate(70px, 90px)"; 
             }
             if (estado == 2) {
-                sim.style.transform = "translate(-30px, 60px)";
+                nao.style.transform = "translate(-30px, 60px)";
             }
             if (estado == 3) {
-                sim.style.transform = "translate(-40px, -60px)";
+                nao.style.transform = "translate(-40px, -60px)";
             }
             if (estado == 4) {
-                sim.style.transform = "translate(30px, 60px)";
+                nao.style.transform = "translate(30px, 60px)";
             }
             if (estado == 5) {
-                sim.style.transform = "translate(50px, -10px)";
+                nao.style.transform = "translate(50px, -10px)";
             }
             if (estado == 6) {
-                sim.style.transform = "translate(-80px, 90px)";
+                nao.style.transform = "translate(-80px, 90px)";
             }
             if (estado == 7) {
-                sim.style.transform = "translate(-90px, -90px)";
+                nao.style.transform = "translate(-90px, -90px)";
                 estado = -1;
             }
         }
@@ -85,9 +85,9 @@
 
 
         function clicar() {
-            resp.innerHTML = "Não foi um bom garoto(a)?, infelizmente você não ganhará presente! kkkkkk"; 
-            sim.style.transform = "translate(0px)";
-            nao.style.transform = "translate(0px, 0px)";
+            resp.innerHTML = " Você foi o acaso mais esperado da minha vida, te amo!!"; 
+            nao.style.transform = "translate(0px)";
+            sim.style.transform = "translate(0px, 0px)";
 
 
             resp.style.opacity = 1;
