@@ -13,7 +13,7 @@
 
 <body>
     <div class="pedido">
-        <h1>Você foi um bom garoto(a)?</h1>
+        <h1>Meu amor, você quer namorar cmg?</h1>
     </div>
     <div class="conteiner">
         <button class="botão" id="botãosim">Sim</button>
@@ -78,16 +78,16 @@
         }
 
 
-        sim.addEventListener("mouseenter", entrar);
+        nao.addEventListener("mouseenter", entrar);
 
 
-        nao.addEventListener("click", clicar);
+        sim.addEventListener("click", clicar);
 
 
         function clicar() {
             resp.innerHTML = "Não foi um bom garoto(a)?, infelizmente você não ganhará presente! kkkkkk"; 
-            nao.style.transform = "translate(0px)";
-            sim.style.transform = "translate(0px, 0px)";
+            sim.style.transform = "translate(0px)";
+            nao.style.transform = "translate(0px, 0px)";
 
 
             resp.style.opacity = 1;
