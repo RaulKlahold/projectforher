@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Seguindo Meu sonho</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
+
+
 <body>
-    
+    <div class="pedido">
+        <h1>Você foi um bom garoto(a)?</h1>
+    </div>
+    <div class="conteiner">
+        <button class="botão" id="botãosim">Sim</button>
+        <button class="botão" id="botãonão">Não</button>
+    </div>
+    <footer id="respostanao">
+    </footer>
+
+
+    <div class="imagem">
+           
+    </div>
+
+    <script>
+        const sim = window.document.getElementById("botãosim");
+        const nao = window.document.getElementById("botãonão"); 
+        const resp = window.document.getElementById("respostanao");
+
+
+        function moverBotao() {
+            var botao = sim;
+            var novoX = Math.random() * window.innerWidth;
+            var novoY = Math.random() * window.innerHeight;
+
+
+            botao.style.left = novoX + 'px';
+            botao.style.top = novoY + 'px';
+        }
+
+
+        let estado = -1;
+
+
+        function entrar() {
+            estado++;
+            if (estado === 0) {
+                nao.style.transform = "translate(50%)";
+                sim.style.transform = "translate(90px, -80px)";
+            }
+            if (estado == 1) {
+                sim.style.transform = "translate(70px, 90px)"; 
+            }
+            if (estado == 2) {
+                sim.style.transform = "translate(-30px, 60px)";
+            }
+            if (estado == 3) {
+                sim.style.transform = "translate(-40px, -60px)";
+            }
+            if (estado == 4) {
+                sim.style.transform = "translate(30px, 60px)";
+            }
+            if (estado == 5) {
+                sim.style.transform = "translate(50px, -10px)";
+            }
+            if (estado == 6) {
+                sim.style.transform = "translate(-80px, 90px)";
+            }
+            if (estado == 7) {
+                sim.style.transform = "translate(-90px, -90px)";
+                estado = -1;
+            }
+        }
+
+
+        sim.addEventListener("mouseenter", entrar);
+
+
+        nao.addEventListener("click", clicar);
+
+
+        function clicar() {
+            resp.innerHTML = "Não foi um bom garoto(a)?, infelizmente você não ganhará presente! kkkkkk"; 
+            nao.style.transform = "translate(0px)";
+            sim.style.transform = "translate(0px, 0px)";
+
+
+            resp.style.opacity = 1;
+
+
+            setTimeout(function () {
+                resp.style.opacity = 0;
+            }, 3000);
+
+
+            moverBotao();
+        }
+    </script>
+
+
 </body>
+
+
 </html>
