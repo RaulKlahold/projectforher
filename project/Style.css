@@ -10,13 +10,19 @@ body {
 }
 
 .botão {
-    padding: 10px 20px; /* Ajustei o padding para algo mais razoável */
+    padding: 10px 20px;
     cursor: pointer;
-    background: linear-gradient(to right, #4e2668, #4e3660, #6b356b );
-    color: #0a0d0f;
-    margin: 10px; 
+    background: linear-gradient(to right, #4e2668, #4e3660, #6b356b);
+    color: #fff;
+    margin: 10px;
+    border: none;
     border-radius: 20px;
-    box-shadow: 2px 4px 6px #000000;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.botao-gradiente:hover {
+    transform: scale(1.05);
 }
 
 .conteiner {
@@ -27,9 +33,15 @@ body {
 
 .pedido {
     text-align: center;
-    color: #5b76a8;
+    color: #dedfe2;
     font-family: 'Great Vibes', cursive;
-    font-size: 100%;
+    font-size: 90%;
+    width: 300px;
+    height: 150px;
+    background-color: #201f1f;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   
 }
 
 footer {
@@ -38,5 +50,7 @@ footer {
     align-items: center;
     font-size: 20px; 
     transition: all 0.5s;
-    color: #5b76a8;
+    color: #dfe1e5;
+    font-family: 'Great Vibes', cursive;
+    width: 300px;
 }
